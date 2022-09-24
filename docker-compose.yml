@@ -1,0 +1,20 @@
+version: '3'
+services:
+  service_one:
+    build:
+      context: "/mnt/slave1"
+    image: "tomcat:1.0"
+    ports:
+      - '8040:80'
+      - '8050:80'
+      - '8060:80'
+
+  service_two:
+    build: 
+      context: "/mnt/slave2"
+    image: "tomcat:2.0"
+    ports:
+      - '8041:80'
+      - '8051:80'
+      - '8061:80'
+
